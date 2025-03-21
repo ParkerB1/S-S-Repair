@@ -219,6 +219,16 @@ body {
         font-size: 1.6rem;
     }
 
+    .logo.active {
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    .left_logo_fill.active {
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
     .logo {
         padding-left: 25px;
         z-index: 100;
