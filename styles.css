@@ -19,7 +19,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 999;
 }
@@ -107,6 +107,82 @@ body {
 .navbar__links:hover {
     color: red;
     transition: all 0.3s ease;
+}
+
+.service__list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(79, 85, 97, 0.5);
+}
+
+.service__image {
+    position: absolute;
+    opacity: .35;
+    height: 100%;
+    width: 100%;
+    object-fit:fill;
+}
+
+.service__line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 1000px;
+    color: black;
+    font-size: 1.8rem;
+    z-index: 5;
+    position: relative;
+    line-height: 2.2rem;
+}
+
+.service__line .title {
+    padding: 20px 0;
+}
+
+.service__line p {
+    margin-top: 30px;
+}
+
+.service__item__desc {
+    margin: 0 30px;
+}
+
+.contact__us {
+    background-color: #db680a;
+    color: white;
+    padding: 20px 20px;
+    margin-top: auto; /* Pushes the contact section to the bottom */
+    text-align: center;
+}
+
+.contact__container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.contact__info {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.logo__footer {
+    width: 300px;
+    height: 220px;
+    border-radius: 150px;
+    margin: 15px 15px 0 15px;
 }
 
 @media (max-width: 900px) {
@@ -207,15 +283,28 @@ body {
     }
 }
 
-.contact__us {
-    background-color: #2c3e50;
-    color: white;
-    padding: 40px 20px;
-    margin-top: auto; /* Pushes the contact section to the bottom */
-    text-align: center;
+@media (max-width: 623px) {
+    .contact__container {
+        justify-content: center;
+    }
 }
 
-.contact__container {
-    max-width: 600px;
-    margin: 0 auto;
+@media (max-width: 1120px) {
+    
+    .service__line {
+        margin-top: 160px;
+    }
+
+    .service__image {
+        display: none;
+    }
+
+    .mobile__service__image {
+        display: block;
+        position: absolute;
+        opacity: .35;
+        height: 100%;
+        width: 100%;
+        object-fit:fill;
+    }
 }
